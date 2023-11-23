@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %} 
+    <title>Tienda de Camisetas</title>
+
+    <body>
+        <header class="text-center">
+            <h1>Tienda de Camisetas</h1>
+            <div class="name text-dark text-uppercase pt-2">Equipos de Futbol</div>
+        </header>
+
+        <div class="row">
+            <div class="col-md-4 mb-3 d-flex justify-content-center">
+                <img src="{% static 'image/inter-milan.jpg' %}" class="img-fluid" alt="" width="200" height="200">
+            </div>
+            <div class="col-md-4 mb-3 d-flex justify-content-center">
+                <img src="{% static 'image/barcelona.png' %}" class="img-fluid" alt="" width="200" height="200">
+            </div>
+            <div class="col-md-4 mb-3 d-flex justify-content-center">
+                <img src="{% static 'image/real-madrid.png' %}" class="img-fluid" alt="" width="200" height="200">
+            </div>
+            <!-- Agrega más bloques similares según sea necesario para cada imagen -->
+        </div>
+
+    </body>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<body>
+    <header class="bg-dark text-white text-center py-4">
+        <h1>¡Próximamente Descuentos!</h1>
+        <p>No te pierdas nuestras increíbles ofertas. ¡Mantente atento!</p>
+    </header>
+
+    <div class="container mt-4 text-center">
+        <img src="{% static 'image/camisetas-varias.jpg'%}" alt="Próximos Descuentos" class="img-fluid mb-4">
+        <p>Estamos emocionados de anunciarte que próximamente lanzaremos increíbles descuentos en nuestra gama de productos. ¡No te lo pierdas!</p>
+        <p>Mientras tanto, descubre nuestras últimas novedades en la sección de productos.</p>
+        <a href="{% url 'index' %}" class="btn btn-medium btn-dark text-uppercase btn-rounded-none">Ver Productos</a>
+    </div>
+
+{%endblock%}

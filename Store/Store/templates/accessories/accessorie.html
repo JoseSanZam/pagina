@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="product-container d-flex align-items-center">
+        <div class="product-image mr-4">
+            {% if accesorie.image %}
+                <img src="{{ accesorie.image.url }}" alt="Imagen del producto" width="300" height="300">
+
+            {% endif %}
+        </div>
+        <div class="product-details ml-4">
+            <h1 class="product-title">{{ accesorie.title }}</h1>
+            <p class="product-description">{{ accesorie.description }}</p>
+            <div class="price-info">
+                <p class="product-price">Precio</p>
+                <span class="item-price text-primary">$ {{ accesorie.price}}</span>
+            </div>
+            <button class="btn btn-medium btn-dark text-uppercase btn-rounded-none">Comprar ahora</button>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %} 
+<h1>Accesorios</h1> 
+<b>{{subtitle}}</b> 
+<div class="row"> 
+    {% for accesorie in Accesorios %} 
+    <div class="col-md-3"> 
+        <div class="card" style="width: 18rem;"> 
+            <img class="card-img-top img-fixed-size" src="{{ accessorie.image.url }}" alt="Imagen de accesorio" >  
+            <div class="card-body text-center"> 
+                <h5 class="card-title" >{{ accesorie.title }}</h5> 
+                <p class="card-text"> 
+                    {% if accesorie.count > 0 %} 
+                        <span class="text-success d-block mb-2">Disponible</span>
+                        <a class="btn btn-medium btn-dark text-uppercase btn-rounded-none" href="{% url 'ver_detalle' accesorie.pk %}">Comprar</a>
+                    {% else %} 
+                        <span class="text-danger d-block mb-2">No Disponible</span> 
+                        <button type="button" class="btn btn-medium btn-dark text-uppercase btn-rounded-none" disabled>Agotado</button>
+                    {% endif %} 
+                </p> 
+            </div> 
+        </div>
+
+    </div> 
+    {% endfor %} 
+</div> 
+{% endblock %}

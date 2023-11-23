@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %} 
+<body>
+    <header class="bg-dark text-white text-center py-4">
+        <h1>Servicios de Venta y Entrega de Camisetas</h1>
+        <p>La mejor manera de lucir con estilo</p>
+    </header>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Variedad de Camisetas</h2>
+                <p>Descubre nuestra amplia selección de camisetas de alta calidad. Desde diseños modernos hasta clásicos atemporales, tenemos algo para todos.</p>
+            </div>
+            <div class="col-md-6">
+                <img src="{% static 'image/camisetas-varias.jpg'%}" alt="Camisetas Variadas" class="img-fluid">
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <img src="{% static 'image/manufactura.jpg'%}" alt="Proceso de Producción" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+                <h2>Proceso de Producción</h2>
+                <p>Nuestras camisetas son producidas con los mejores materiales y técnicas de fabricación. Garantizamos calidad en cada prenda que vendemos.</p>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <h2>Entrega Rápida y Segura</h2>
+                <p>Ofrecemos un servicio de entrega rápido y seguro. Recibe tus camisetas en la puerta de tu casa con nuestro servicio de entrega confiable.</p>
+            </div>
+            <div class="col-md-6">
+                <img src="{% static 'image/entrega.jpg'%}" alt="Entrega Rápida y Segura" class="img-fluid">
+            </div>
+        </div>
+    </div>
+
+
+{%endblock%}
